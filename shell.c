@@ -1,7 +1,8 @@
 #include "shell.h"
 
-int main(void)
+int main(int ac, char **av, char **env)
 {
+<<<<<<< HEAD
 	char *_lineptr = NULL, *tok, *line_ptr_copy;
 	size_t n = 0;
 	ssize_t return_getline;
@@ -9,6 +10,11 @@ int main(void)
        int j, i, status;
        char **array;
       /* pid_t child;*/
+=======
+	if (ac == 1)
+		prompt(av, env);
+	char *prompt = "$ ";
+>>>>>>> e6b5f39a33e25957a28a2433cfc6fd5e19689164
 
 	while (1)
 	{

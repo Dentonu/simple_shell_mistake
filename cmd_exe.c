@@ -2,5 +2,7 @@
 
 void cmd_exe(char **array)
 {
-	char 
+	char*cmd;
+       cmd = array[0];
+
 }
