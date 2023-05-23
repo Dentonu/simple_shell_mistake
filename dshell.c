@@ -51,7 +51,12 @@ int main(int ac, char **av, char **env)
 		}
 		array[i] = NULL;
 		
-		if (array)
+		cmd_exe(array);
 
-			return (0);
+	}
+
+       free(_lineptr);
+       free(line_ptr_copy);
+
+return (0);
 }

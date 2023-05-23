@@ -8,6 +8,6 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/wait.h>
-
+void cmd_exe(char **array);
 
 #endif /* SHELL_H */
