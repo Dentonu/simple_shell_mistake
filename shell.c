@@ -1,21 +1,15 @@
 #include "shell.h"
 
-int main(int ac, char **av, char **env)
+int main(void)
 {
-<<<<<<< HEAD
 	char *_lineptr = NULL, *tok, *line_ptr_copy;
 	size_t n = 0;
 	ssize_t return_getline;
        char prompt[] = "$ ";
-       int j, i, status;
+       int j, i;
        char **array;
       /* pid_t child;*/
-=======
-	if (ac == 1)
-		prompt(av, env);
-	char *prompt = "$ ";
->>>>>>> e6b5f39a33e25957a28a2433cfc6fd5e19689164
-
+	
 	while (1)
 	{
 		printf("%s ", prompt);
@@ -56,8 +50,9 @@ int main(int ac, char **av, char **env)
 			tok = strtok(NULL, " ");
 		}
 		array[i] = NULL;
-		
-		if (array)
-
-			return (0);
+		cmd_exe(array);
+	}
+	free(_lineptr);
+	free(line_ptr_copy);
+	return (0);
 }
