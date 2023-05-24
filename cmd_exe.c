@@ -2,15 +2,15 @@
 
 void cmd_exe(char **array)
 {
-	char*cmd;
+	char *cmd;
        
 	cmd = array[0];
 
 	if (array)
 	{
-		if (execve(command, argv, NULL) == -1)
+		if (execve(cmd, array, NULL) == -1)
 		{
-			perro("Error...");
+			perror("Error...");
 
 		}
 	}

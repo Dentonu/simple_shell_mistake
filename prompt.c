@@ -29,6 +29,7 @@ void prompt(char **av, char **env)
 		{
 			if (string[i] == '\n')
 				string[i] = 0;
+			i++;
 		}
 		argv[0] = string;/* The command that the user types in,  put it as the the first argument to the array of string (char *argv[] = {NULL, NULL}). So the null will be changed to whatever command the user types in*/
 		pd_pid = fork();
